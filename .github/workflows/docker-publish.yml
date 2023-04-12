@@ -16,6 +16,9 @@ jobs:
       version: ${{ steps.release.outputs.version }}
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      contents: read
+      packages: write
     steps:
       - id: release
         uses: rymndhng/release-on-push-action@master
