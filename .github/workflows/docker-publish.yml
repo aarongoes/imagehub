@@ -17,8 +17,8 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     permissions:
-      contents: read
-      packages: write
+      contents: write
+      pull-requests: read
     steps:
       - id: release
         uses: rymndhng/release-on-push-action@master
