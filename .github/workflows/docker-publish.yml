@@ -122,5 +122,5 @@ jobs:
       - name: Deploy
         uses: WyriHaximus/github-action-helm3@v2
         with:
-          exec: helm upgrade ${{ steps.replacedots.outputs.value }} ./.helm/ --install --wait --atomic --namespace=midee --create-namespace --set=app.name=${{ steps.replacedots.outputs.value }} --set=image.url=${{ needs.build.outputs.url }}
+          exec: helm upgrade ${{ steps.replacedots.outputs.value }} ./.helm/ --install --wait --atomic --namespace=imagehub --create-namespace --set=app.name=${{ steps.replacedots.outputs.value }} --set=image.url=${{ needs.build.outputs.url }}
           kubeconfig: '${{ secrets.KUBECONFIG }}'
